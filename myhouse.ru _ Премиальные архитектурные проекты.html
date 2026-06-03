@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)file:///D:/PCTMoveData/Desktop/zakaz.html -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>myhouse.ru | Премиальные архитектурные проекты</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f6f5ef;   /* дорогой кремовый фон */
+            font-family: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
+            color: #2c2b28;
+            line-height: 1.45;
+            scroll-behavior: smooth;
+        }
+
+        /* Подключение элегантного шрифта с засечками и современного sans для акцентов */
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+        /* контейнер с ограничением ширины */
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* ===== ПРЕМИУМ-СТИЛИ ===== */
+        .gold-accent {
+            color: #b48c48;
+        }
+
+        .gold-border {
+            border-bottom: 2px solid #b48c48;
+            display: inline-block;
+            padding-bottom: 6px;
+        }
+
+        /* шапка */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 32px 0 24px;
+            flex-wrap: wrap;
+            gap: 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+        }
+
+        .logo h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            color: #1f3b2c;
+        }
+
+        .logo p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8f8c7c;
+            margin-top: 6px;
+        }
+
+        .order-btn {
+            font-family: 'Inter', sans-serif;
+            background: transparent;
+            border: 1.5px solid #b48c48;
+            padding: 12px 32px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            color: #1f3b2c;
+            text-decoration: none;
+            transition: 0.25s ease;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .order-btn:hover {
+            background: #b48c48;
+            color: white;
+            border-color: #b48c48;
+            box-shadow: 0 6px 14px rgba(180, 140, 72, 0.2);
+        }
+
+        /* intro текст */
+        .intro {
+            margin: 60px 0 40px;
+            max-width: 85%;
+        }
+
+        .intro h2 {
+            font-size: 3rem;
+            font-weight: 500;
+            color: #1f3b2c;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: #3e3c36;
+            margin-bottom: 1.2rem;
+            line-height: 1.55;
+        }
+
+        /* сетка категорий (проекты домов и площади) */
+        .features-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin: 60px 0;
+            border-top: 1px solid #e2dfd3;
+            padding-top: 50px;
+        }
+
+        .feature-card {
+            flex: 1;
+            background: #ffffff;
+            padding: 28px 32px;
+            border-radius: 24px;
+            box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.05);
+            transition: 0.2s;
+            border: 1px solid #f0ede2;
+        }
+
+        .feature-card h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #1f3b2c;
+            border-left: 4px solid #b48c48;
+            padding-left: 16px;
+        }
+
+        .feature-card ul {
+            list-style: none;
+        }
+
+        .feature-card li {
+            font-family: 'Inter', sans-serif;
+            margin: 14px 0;
+            font-weight: 400;
+            color: #4a4942;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-card li::before {
+            content: "—";
+            color: #b48c48;
+            font-weight: 500;
+        }
+
+        /* премиум-таблица */
+        .projects-section {
+            margin: 70px 0;
+        }
+
+        .section-title {
+            font-size: 2.3rem;
+            font-weight: 500;
+            color: #1f3b2c;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .section-title span {
+            border-bottom: 3px solid #b48c48;
+            padding-bottom: 8px;
+        }
+
+        .premium-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #ffffff;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08);
+        }
+
+        .premium-table th {
+            background: #f4f2ea;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 18px 16px;
+            color: #5b594b;
+            border-bottom: 1px solid #e9e4d6;
+        }
+
+        .premium-table td {
+            padding: 18px 16px;
+            font-family: 'Inter', sans-serif;
+            border-bottom: 1px solid #efebdf;
+            vertical-align: middle;
+            color: #2c2b28;
+        }
+
+        .premium-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .project-img {
+            width: 100px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 14px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .project-img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        /* форма заказа — элегантная */
+        .form-block {
+            background: #ffffff;
+            border-radius: 32px;
+            padding: 48px;
+            margin: 60px 0;
+            box-shadow: 0 20px 40px -16px rgba(0, 0, 0, 0.05);
+            border: 1px solid #ece7db;
+        }
+
+        .form-block h2 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            color: #1f3b2c;
+        }
+
+        .form-note {
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 32px;
+            color: #74715f;
+            border-left: 3px solid #b48c48;
+            padding-left: 18px;
+        }
+
+        .form-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .form-row label {
+            width: 210px;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            color: #1f3b2c;
+        }
+
+        .form-row input, .form-row select {
+            flex: 1;
+            padding: 12px 18px;
+            border: 1px solid #dcd6c4;
+            border-radius: 32px;
+            font-family: 'Inter', sans-serif;
+            background: #fefcf7;
+            transition: 0.2s;
+        }
+
+        .form-row input:focus, .form-row select:focus {
+            outline: none;
+            border-color: #b48c48;
+            box-shadow: 0 0 0 3px rgba(180,140,72,0.1);
+        }
+
+        .radio-group {
+            flex: 1;
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .radio-group label {
+            width: auto;
+            font-weight: normal;
+        }
+
+        .btn-group {
+            margin-left: 226px;
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .btn-primary {
+            background: #1f3b2c;
+            color: white;
+            border: none;
+            padding: 12px 34px;
+            border-radius: 40px;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-primary:hover {
+            background: #b48c48;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid #c8c2ae;
+            padding: 12px 34px;
+            border-radius: 40px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-secondary:hover {
+            border-color: #b48c48;
+            background: #faf7ef;
+        }
+
+        .mail-link {
+            font-family: 'Inter', sans-serif;
+            color: #b48c48;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dashed #b48c48;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #e2dfd3;
+            color: #898671;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                padding: 0 24px;
+            }
+            .intro {
+                max-width: 100%;
+            }
+            .btn-group {
+                margin-left: 0;
+            }
+            .form-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .form-row label {
+                width: auto;
+            }
+            .premium-table th, .premium-table td {
+                padding: 12px 8px;
+                font-size: 0.8rem;
+            }
+            .project-img {
+                width: 70px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- шапка, вдохновлённая премиум-эстетикой -->
+    <div class="header">
+        <div class="logo">
+            <h1>myhouse<span class="gold-accent">.</span>ru</h1>
+            <p>архитектурное бюро</p>
+        </div>
+        <a href="file:///D:/PCTMoveData/Desktop/zakaz.html#orderForm" class="order-btn">СОЗДАТЬ ПРОЕКТ</a>
+    </div>
+
+    <!-- основной текст каталога (точно как на картинке, но дороже) -->
+    <div class="intro">
+        <h2>Каталог архитектурных<br>проектов</h2>
+        <p><strong>Проекты для Вашего будущего дома</strong></p>
+        <p>Каталог готовых архитектурных проектов коттеджей <strong>myhouse.ru</strong> явился результатом многолетней работы лучших российских специалистов в области архитектуры и строительства.<br> 
+        Это своего рода «Собрание сочинений» от современной загородной архитектуры, в котором каждый может найти что-то свое.</p>
+        <p>Проекты коттеджей из каталога нельзя называть типовыми, поскольку разрабатывались они в порядке индивидуального проектирования непосредственно под нужды будущих владельцев загородных домов.<br>
+        Более 95% проектов реализовано в строительстве. Большая часть проектов реализована неоднократно, как в Московской области, так и по всей территории Российской Федерации, в странах ближнего зарубежья.</p>
+        <p>Экономическая составляющая и вопросы престижа не менее важны при выборе проекта дома. Разброс проектных площадей — велик. В настоящее время это дома от 50 до 1300 м² общей площади. Часть из них можно отнести к дачам, в то время, как другую, смело причислять к образцам великолепной дворовой архитектуры. Разумеется, средние по размерам проекты представлены наиболее полно и отражают все тенденции в современном коттеджном строительстве.</p>
+    </div>
+
+    <!-- блок проекты домов и площади (как на картинке, но в премиум-карточках) -->
+    <div class="features-grid">
+        <div class="feature-card">
+            <h3>Проекты домов</h3>
+            <ul>
+                <li>Проекты кирпичных домов</li>
+                <li>Проекты домов из газобетона и пенобетона</li>
+                <li>Проекты домов из бруса и бревна</li>
+                <li>Проекты каркасных домов</li>
+            </ul>
+        </div>
+        <div class="feature-card">
+            <h3>Площади домов</h3>
+            <ul>
+                <li>до 150 м²</li>
+                <li>от 150 до 250 м²</li>
+                <li>от 250 до 400 м²</li>
+                <li>от 400 м²</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- роскошная таблица реализованных проектов (как образец) -->
+    <div class="projects-section">
+        <div class="section-title"><span>Реализованные резиденции</span></div>
+        <table class="premium-table">
+            <thead>
+                <tr><th>Визуализация</th><th>Название проекта</th><th>Площадь</th><th>Материал</th><th>Спальни</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><img class="project-img" src="./myhouse.ru _ Премиальные архитектурные проекты_files/287b0fe0f7da75976c9f740f1254d7c2.jpg" alt="проект"></td><td>Скандинавский стиль "Фьорд"</td><td>148 м²</td><td>Газобетон</td><td>3</td></tr>
+                <tr><td><img class="project-img" src="./myhouse.ru _ Премиальные архитектурные проекты_files/a381dd34a729c4174d93fa2662c3580f.jpg" alt="проект"></td><td>Классический особняк "Орхидея"</td><td>276 м²</td><td>Кирпич</td><td>5</td></tr>
+                <tr><td><img class="project-img" src="./myhouse.ru _ Премиальные архитектурные проекты_files/0a4021c7ff52a47d72253b692a0fa5ae.jpg" alt="проект"></td><td>Современный дом "Авангард"</td><td>195 м²</td><td>Кирпич+термопанели</td><td>4</td></tr>
+                <tr><td><img class="project-img" src="./myhouse.ru _ Премиальные архитектурные проекты_files/i" alt="проект"></td><td>Скандинавский коттедж "Вальхалла"</td><td>162 м²</td><td>Брус</td><td>3</td></tr>
+                <tr><td><img class="project-img" src="./myhouse.ru _ Премиальные архитектурные проекты_files/Proekt-doma-Alfaplan_955B-S_01.jpg" alt="проект"></td><td>Престижный дом "Альфаплан"</td><td>312 м²</td><td>Газобетон/кирпич</td><td>5</td></tr>
+            </tbody>
+        </table>
+        <p style="text-align: center; font-size: 0.75rem; margin-top: 16px; color: #8f8c7a;">⁕ каждое изображение кликабельно — нажмите, чтобы открыть в полном размере</p>
+    </div>
+
+    <!-- ФОРМА ЗАКАЗА (полностью соответствует заданию: поля со *, выпадающие списки, очистка, ссылка написать письмо) -->
+    <div id="orderForm" class="form-block">
+        <h2>Заказ проекта</h2>
+        <div class="form-note">
+            Вы можете послать письмо на наш электронный адрес 
+            <a href="mailto:residence@myhouse.ru?subject=%D0%97%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0" class="mail-link">написать письмо</a><br>
+            Здесь Вы можете заполнить форму заказа для покупки проекта. <br>
+            <span style="color:#b48c48;">Поля со * обязательны для заполнения.</span>
+        </div>
+
+        <form id="premiumOrderForm" action="file:///D:/PCTMoveData/Desktop/zakaz.html#" method="post">
+            <div class="form-grid">
+                <div class="form-row">
+                    <label>Фамилия, имя, отчество* :</label>
+                    <input type="text" name="fullname" placeholder="Иванов Иван Иванович" style="border-color: rgb(180, 140, 72);">
+                </div>
+                <div class="form-row">
+                    <label>Телефон* :</label>
+                    <input type="tel" name="phone" placeholder="+7 (999) 123-45-67" style="border-color: rgb(180, 140, 72);">
+                </div>
+                <div class="form-row">
+                    <label>E-mail* :</label>
+                    <input type="email" name="email" placeholder="hello@myhouse.ru" style="border-color: rgb(180, 140, 72);">
+                </div>
+                <div class="form-row">
+                    <label>Адрес :</label>
+                    <input type="text" name="address" placeholder="Московская область, участок">
+                </div>
+                <div class="form-row">
+                    <label>Выберите категорию проекта:</label>
+                    <select name="projectCategory">
+                        <option>Проекты таунхаусов и блокированных домов</option>
+                        <option>Проекты домов на две семьи</option>
+                        <option>Проекты узких домов</option>
+                        <option>Проекты бань</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label>Выберите материал:</label>
+                    <select name="buildingMaterial">
+                        <option>Проекты кирпичных домов</option>
+                        <option>Проекты домов из газобетона и пенобетона</option>
+                        <option>Проекты домов из бруса и бревна</option>
+                        <option>Проекты каркасных домов</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label>Ваш возраст:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="ageGroup" value="до 18"> до 18</label>
+                        <label><input type="radio" name="ageGroup" value="18-50" checked=""> 18-50</label>
+                        <label><input type="radio" name="ageGroup" value="Старше 50"> Старше 50</label>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" id="orderBtn" class="btn-primary">ОТПРАВИТЬ ЗАЯВКУ</button>
+                    <button type="button" id="clearFormBtn" class="btn-secondary">ОЧИСТИТЬ ФОРМУ</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        © myhouse.ru — архитектурное бюро премиум-класса. Все проекты адаптированы под российский климат.<br>
+        Представленные фото — примеры реализованных объектов.
+    </footer>
+</div>
+
+<script>
+    // Очистка формы (кнопка Очистить)
+    const clearBtn = document.getElementById('clearFormBtn');
+    const formInputs = document.querySelectorAll('#premiumOrderForm input, #premiumOrderForm select');
+    const ageRadios = document.querySelectorAll('input[name="ageGroup"]');
+    const fullname = document.querySelector('input[name="fullname"]');
+    const phone = document.querySelector('input[name="phone"]');
+    const email = document.querySelector('input[name="email"]');
+
+    clearBtn.addEventListener('click', () => {
+        formInputs.forEach(input => {
+            if (input.type !== 'radio' && input.type !== 'submit') {
+                input.value = '';
+            }
+        });
+        ageRadios.forEach(radio => {
+            if (radio.value === '18-50') radio.checked = true;
+            else radio.checked = false;
+        });
+        [fullname, phone, email].forEach(i => i.style.borderColor = '#dcd6c4');
+    });
+
+    // Кнопка заказа (демо-валидация обязательных полей)
+    const orderBtn = document.getElementById('orderBtn');
+    orderBtn.addEventListener('click', () => {
+        let errors = [];
+        if (!fullname.value.trim()) errors.push('ФИО');
+        if (!phone.value.trim()) errors.push('Телефон');
+        if (!email.value.trim()) errors.push('E-mail');
+        if (errors.length) {
+            alert('Заполните обязательные поля: ' + errors.join(', '));
+            if (!fullname.value.trim()) fullname.style.borderColor = '#b48c48';
+            if (!phone.value.trim()) phone.style.borderColor = '#b48c48';
+            if (!email.value.trim()) email.style.borderColor = '#b48c48';
+            return;
+        }
+        alert('Благодарим за заявку! Наш архитектор свяжется с вами в течение 24 часов.');
+    });
+</script>
+
+</body></html>
